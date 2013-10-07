@@ -1710,3 +1710,90 @@ footer{
 	
 	color:#6c6c6c;
 }
+
+/*******************************************************
+@ This CSS file is created
+@ By      : Liu Kangning
+@ For     : Ripple mobile version
+@ On      : 6th Oct 2013
+@ QQ      : 410532598
+@ Email   : liukangning@gmail.com
+@ Github  : https://github.com/decradish
+********************************************************/
+
+/*	Less Framework 4
+	http://lessframework.com
+	by Joni Korpi
+	License: http://opensource.org/licenses/mit-license.php	*/
+
+/*		Default Layout: 960px.
+		Gutters: 24px.
+		Outer margins: 48px.
+		Leftover space for scrollbars @960px: 32px.
+-------------------------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8      9      10
+px      68    160    252    344    436    528    620    712    804    896    */
+#mobile_nav{
+	display: none;}
+
+/*		Tablet Layout: 768px.
+		Gutters: 24px.
+		Outer margins: 28px.
+		Inherits styles from: Default Layout.
+-----------------------------------------------------------------
+cols    1     2      3      4      5      6      7      8
+px      68    160    252    344    436    528    620    712    */
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+}
+
+
+
+/*		Mobile Layout: 320px.
+		Gutters: 24px.
+		Outer margins: 34px.
+		Inherits styles from: Default Layout.
+---------------------------------------------
+cols    1     2      3
+px      68    160    252    */
+
+@media only screen and (max-width: 959px) {
+	.header_inner{
+		width: auto;
+		min-width: 320px;
+		position: relative;}
+		.nav{
+			width: 100%;
+			margin: 0;}
+			.nav li{display: none;}
+			.nav li.logo{
+				display: block;
+				margin: 0 auto;
+				float: none;}
+		.login_btn{display: none;}
+		#mobile_nav{
+			width: 70px;
+			height: 70px;
+			display: block;
+			position: absolute;
+			right: 0;
+			margin: 8px 0px 0 0;
+			background: #dfe3e3 url(../image/mobile_nav_bg.jpg) no-repeat center center;}
+	.sub_content_inner{
+		width: auto;
+		min-width: 320px;}
+}
+
+
+
+/*		Wide Mobile Layout: 480px.
+		Gutters: 24px.
+		Outer margins: 22px.
+		Inherits styles from: Default Layout, Mobile Layout.
+------------------------------------------------------------
+cols    1     2      3      4      5
+px      68    160    252    344    436    */
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+
+}
