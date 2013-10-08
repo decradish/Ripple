@@ -1758,7 +1758,7 @@ cols    1     2      3
 px      68    160    252    */
 
 @media only screen and (max-width: 959px) {
-	body{overflow: hidden;}
+	/*body{overflow: hidden;}*/
 	.header_inner{
 		width: auto;
 		min-width: 320px;
@@ -1810,17 +1810,90 @@ px      68    160    252    */
 						background: url(../image/mobile_login.png) no-repeat 65px center;}
 	.sub_content_inner{
 		width: auto;
-		min-width: 320px;}
-	.content{display: none;}
+		/*min-width: 320px;*/}
+
+	.links_inner{width: auto;}
+		.links_quicklinks,
+		.links_news{display: none;}
+		.links_intouch{width: 100%;}
+			.links_intouch h3{display: none;}
+			.links_intouch ul li{
+				width: 50%;
+				height: 29px;
+				display: block;
+				padding: 0;
+				margin: 30px 0 0;
+				text-indent: 55px;
+				float: left;
+				background: url(../image/sns.jpg) no-repeat 20px 0;}
+				.links_intouch a{
+					font-size: 14px;
+					text-decoration: underline;
+					line-height: 29px;
+					color: #000;}
+					.links_intouch .twitter-link{background-position: 20px -59px;}
+					.links_intouch .linkedin-link{background-position: 20px -29px;}
+					.links_intouch .vimeo-link{background-position: 20px bottom;}
+	.banner,
+	.op_banner,
+	.sdkbanner{display: none;}
+	.sub_content_inner{padding-top: 86px;}
+		.breadcrumbs{width: auto;margin: 10px 0 25px 25px;}
+		.left_slidebar{
+			height: 39px;
+			margin-left: 25px;
+			position: relative;
+			z-index: 20;}
+			.case_studies{display: none !important;}
+			.left_slidebar h3{
+				display: none;
+				width: auto;
+				padding-left: 0;
+				text-indent: 30px;
+				margin: 0;
+				border-top: 2px solid #fff;
+				border-bottom: 2px solid #fff;}
+				.left_slidebar h3#on{
+					display: block;
+					background: #ececec url(../image/dropdown_arrow.png) no-repeat 200px center;}
+					.left_slidebar h3#on.siblings{background-image: none;}
+				.left_slidebar h3 a{
+					height: 35px;
+					display: block;}
+
+		.content{
+			width: auto;
+			margin: 0 25px;}
+			.content h1{margin-top: 15px;}
+				.breviary{margin: 10px 0;}
+					.breviary > a{display: block;}
+						.breviary img{float: none;}
+					.text{
+						width: auto;
+						float: none;
+						margin: 0 0 20px;}
+			.exper_taball{display: none;}
+			.expic_list ul{text-align: center;}
+				.expic_list ul li{
+					float: none;
+					margin: 10px 15px 0;
+					vertical-align:top;
+					display: inline-block;}
 
 #footer{height: auto;}
-	footer{width: auto;padding: 10px 0 0;}
+	footer{
+		width: auto;
+		height: 107px;
+		padding: 10px 0 0;}
 	.copyright,
 	.group_ventune{
 		width: auto;
 		height: auto;
 		float: none;
+		margin-top: 50px;
 		text-align: center;}
+	.group_ventune{margin-top: -100px;}
+
 }
 
 

@@ -123,4 +123,16 @@ $(function(){
 					.parent().addClass("showing");
 			}
 		});
+
+	//for crumbs dropdown menu
+	//$("div.left_slidebar h3#on a").click
+	$("#on").click(function(){
+		$(this)
+			.addClass("siblings")
+			.siblings("h3").show();
+	})
+	.find("a").attr("href", "JavaScript:void(0);");
 });
+
+
+
