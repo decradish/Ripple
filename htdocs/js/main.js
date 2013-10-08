@@ -1,15 +1,15 @@
 // JavaScript Document
 $(function() {
 		   
-	 var $news=$(".news");
-				$news.show();
-				$('.hnews').click(function(){
-				if($news.is(":visible")){
-				$news.hide();
-				}else{
-				$news.show();
-				}
-				});
+	var $news=$(".news");
+	$news.show();
+	$('.hnews').click(function(){
+		if($news.is(":visible")){
+			$news.hide();
+		}else{
+			$news.show();
+		}
+	});
 		   
 	/*$('.bottom_btn_open').click(function(){
 		$('.ad_layor').slideToggle("slow");
@@ -97,4 +97,30 @@ $(function(){
 $(function(){
 	//for top left nav in mobile version
 	var oNav = $("ul.nav");
+	var sATags = '<div id="mobile_nav"><div class="mobile_nav_core">';
+	oNav.find("a").each(function(){
+		if(!$(this).hasClass("logo")){
+			sATags += $(this)[0].outerHTML;
+		}
+	});
+	sATags += oNav.next(".login_btn")[0].outerHTML;
+	sATags += '</div></div>';
+	oNav.next(".login_btn")
+		.after(sATags)
+		.next("#mobile_nav").click(function(){
+			var oThis = $(this);
+			if(oThis.hasClass("showing")){
+				oThis
+					.find("div.mobile_nav_core").animate({
+						marginTop: -350
+					})
+					.parent().removeClass("showing");
+			}else{
+				oThis
+					.find("div.mobile_nav_core").animate({
+						marginTop: 0
+					})
+					.parent().addClass("showing");
+			}
+		});
 });
