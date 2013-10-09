@@ -1788,6 +1788,7 @@ px      68    160    252    */
 				margin-right: -10px;
 				margin-top: -350px;
 				position: absolute;
+				z-index: 1001;
 				/*display: none;*/
 				background: url(../image/mobile_arrow.jpg) no-repeat 73px 0;}
 				#mobile_nav a,
@@ -1807,7 +1808,7 @@ px      68    160    252    */
 					#mobile_nav div:active{background-color: #ebfafd;}
 					#mobile_nav .login_btn{
 						padding: 0;
-						background: url(../image/mobile_login.png) no-repeat 65px center;}
+						background: #fcfefe url(../image/mobile_login.png) no-repeat 65px center;}
 	.sub_content_inner{
 		width: auto;
 		/*min-width: 320px;*/}
@@ -1836,14 +1837,16 @@ px      68    160    252    */
 					.links_intouch .vimeo-link{background-position: 20px bottom;}
 	.banner,
 	.op_banner,
-	.sdkbanner{display: none;}
+	.sdkbanner,
+	.aboutus_banner,
+	.aboutus_culture_banner{display: none;}
 	.sub_content_inner{padding-top: 86px;}
 		.breadcrumbs{width: auto;margin: 10px 0 25px 25px;}
 		.left_slidebar{
 			height: 39px;
 			margin-left: 25px;
 			position: relative;
-			z-index: 20;}
+			z-index: 1000;}
 			.case_studies{display: none !important;}
 			.left_slidebar h3{
 				display: none;
@@ -1879,6 +1882,40 @@ px      68    160    252    */
 					margin: 10px 15px 0;
 					vertical-align:top;
 					display: inline-block;}
+			.table td{position: relative;}
+			.tdfirst{width: auto;}
+				.table img.dingwei{
+					position: absolute;
+					right: 0;
+					left: auto;
+					margin-top: -2px;
+					margin-right: 0px;}
+				.table input,
+				.table select{width: 100%;}
+				.table ul.ulli{width: auto;}
+				.table .email img{clear: left;}
+			.download{
+				width: auto;
+				height: auto;
+				padding: 5px;
+				margin: 10px -10px;
+				overflow: hidden;
+				background-color: #ececec;}
+			.submit_button{margin: 0 auto;left: auto;top: auto;}
+			.top_features + .breviary{margin-top: 30px;}
+			.downloadlist p{
+				width: 100%;
+				margin-bottom: 3px;
+				clear: both;}
+			.text_highlights{margin: 0 -15px;}
+				.partner_box{margin-right: 5px;}
+			.news_tab{
+				margin: 0 -6px;
+				overflow: hidden;
+				padding-bottom: 10px;}
+				.news_tab > span,
+				.news_tab a span{margin-right: 0;}
+				.news_tab a:first-child span{margin-right: 5px;}
 
 #footer{height: auto;}
 	footer{

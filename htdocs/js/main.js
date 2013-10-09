@@ -127,9 +127,16 @@ $(function(){
 	//for crumbs dropdown menu
 	//$("div.left_slidebar h3#on a").click
 	$("#on").click(function(){
-		$(this)
-			.addClass("siblings")
-			.siblings("h3").show();
+		var oThis = $(this);
+		if(oThis.hasClass("siblings")){
+			oThis
+				.removeClass("siblings")
+				.siblings("h3").hide();
+		}else{
+			oThis
+				.addClass("siblings")
+				.siblings("h3").show();
+		}
 	})
 	.find("a").attr("href", "JavaScript:void(0);");
 });
