@@ -112,7 +112,7 @@ $(function(){
 			if(oThis.hasClass("showing")){
 				oThis
 					.find("div.mobile_nav_core").animate({
-						marginTop: -350
+						marginTop: -450
 					})
 					.parent().removeClass("showing");
 			}else{
