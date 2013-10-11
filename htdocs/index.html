@@ -10,8 +10,9 @@
 	<script type="text/javascript">// <![CDATA[
 var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windowssce|palm/i.test(navigator.userAgent.toLowerCase()));     if (mobile) {         document.location = "http://touch.ripple.ad/";     }
 // ]]></script>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-  	<script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>
+	<!--<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+	<script src="js/jquery-1.9.1.min.js"></script>
+  	<!--<script>window.jQuery || document.write('<script src="js/jquery-1.9.1.min.js"><\/script>')</script>-->
   	<script src="js/main.js"></script>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 	
@@ -97,6 +98,12 @@ var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windowssce|palm/i.test(n
 				<!-- <div id="intro">
 					Super
 				</div> -->
+
+				<div class="mobile_a_wrapper">
+					<a class="one_line" href="#">Enhanced yield for your apps</a>
+					<a href="#">Engaging, Targeted & Impactful cross-screen ads.</a>
+					<a href="#">Engaging ads, Top brands, Higher eCPM’s.</a>
+				</div><!-- /.mobile_a_wrapper -->
 			</div>
 		</div><!--end of firstpage-->
 		<div class="secondpage">
@@ -113,6 +120,11 @@ var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windowssce|palm/i.test(n
 					<div class="sec_person_desk"></div>
 				</div>
 				<div class="secondpage_arrow"></div>
+
+				<div class="mobile_a_wrapper">
+					<a class="one_line" href="#">Impactful mobile rich media ads</a>
+					<a href="#">Engaging video advertising</a>
+				</div><!-- /.mobile_a_wrapper -->
 			</div>
 		</div><!--end of secondpage-->
 		<div class="secondpage">
@@ -268,6 +280,7 @@ var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windowssce|palm/i.test(n
 	}
 		$(document).ready(function() {
 			var leftspace = $(window).width()/2-146/2;
+			if($("#mobile_nav").is(":visible")){leftspace = leftspace - 45;}
 			var moveleftspace = $(window).width()/2-146/2-400;
 			$('#ipone').css('left',leftspace);
 			$('.wight_point').eq(0).click(function(){
@@ -467,9 +480,8 @@ var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windowssce|palm/i.test(n
 				.from( $('#circle_wapper'), 0.1, {delay: 0, css:{opacity: 0}, ease:Quad.easeOut})
 				.from( $('#ipone'), .7, {css:{top:'-500px',left: leftspace}, ease:Quad.easeOut})
 				.to( $('#ipone'), .7, {css:{left: leftspace}, ease:Quad.easeOut})
-				.from( $('#page_title_1'), 0.75, {delay: 0, css:{opacity: 0,fontSize: 0},  ease:Quad.easeOut})
-			
-				;
+				.from( $('#page_title_1'), 0.75, {delay: 0, css:{opacity: 0,fontSize: 0},  ease:Quad.easeOut});
+
 			window.onload = function() {
 			    var doller1 = document.getElementById("fly_doller_left");
 			    var doller2 = document.getElementById("fly_doller_right"); 
@@ -498,15 +510,14 @@ var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windowssce|palm/i.test(n
 
 				controller.addTween(10, TweenMax.to($('#page_title_1'), 1, {css:{opacity: 0, fontSize: 0}, ease:Quad.easeOut}));
 				/*controller.addTween(10, TweenMax.to($('#ipone'), .75, {css:{left:leftspace,width: '146px',height: '232px'}, ease:Quad.easeOut}));*/
-				controller.addTween(10, TweenMax.fromTo($('#ipone'), .75, {css:{width: '146px',left:leftspace,height: '232px'}, ease:Quad.easeOut},{css:{left:leftspace,width: '146px',height: '232px'}}));
+				controller.addTween(10, TweenMax.fromTo($('#ipone'), .75, {css:{width: '146px',left:leftspace,height: '232px', marginTop: 0}, ease:Quad.easeOut},{css:{left:leftspace,width: '146px',height: '232px', marginTop: 0}}));
 				/*controller.addTween(10, TweenMax.fromTo($('#ipone_images'), 0.1, {css:{display:'block'}, ease:Quad.easeOut},{css:{display:'block'}}));*/
-
 				controller.addTween(501, TweenMax.fromTo($('.blue_point'), .1, {css:{top:'0px'}, ease:Quad.easeOut},{css:{top:'20px'}}));
 				controller.addTween(501, TweenMax.fromTo($('#ipone_images'), 0.1, {css:{display:'block'}, ease:Quad.easeOut},{css:{display:'none'}}));
 				/*controller.addTween(501, TweenMax.to($('#phone_content'), 0.7, {css:{display:'block',opacity: 1}, ease:Quad.easeOut}));*/
 				controller.addTween(501, TweenMax.fromTo($('#phone_content'), .1, {css:{display:'none',opacity: 0}, ease:Quad.easeOut},{css:{display:'block',opacity: 1}}));
 				controller.addTween(501, TweenMax.to($('#ipone_images_big'), 0.75, {css:{display:'block',opacity: 1}, ease:Quad.easeOut}));
-				controller.addTween(501, TweenMax.fromTo($('#ipone'), .75, {css:{width: '146px',left:leftspace,height: '232px'}, ease:Quad.easeOut},{css:{width: '219px',left:leftspace-30,height: '457px'}}));
+				controller.addTween(501, TweenMax.fromTo($('#ipone'), .75, {css:{width: '146px',left:leftspace,height: '232px', marginTop: -120}, ease:Quad.easeOut},{css:{width: '219px',left:leftspace-30,height: '457px'}}));
 				/*controller.addTween(501, TweenMax.fromTo($('#phone_content2'), .1, {css:{display:'none',opacity: 0}, ease:Quad.easeOut},{css:{display:'none',opacity: 0}}));*/
 				controller.addTween(501, TweenMax.from($('#person_left_1'), .75, {css:{left: '-1000px',opacity: 0}, ease:Quad.easeOut}));
 				controller.addTween(501, TweenMax.from($('#person_right_1'), .75, {css:{right: '-1000px',opacity: 0}, ease:Quad.easeOut}));

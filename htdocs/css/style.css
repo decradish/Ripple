@@ -1733,8 +1733,8 @@ footer{
 -------------------------------------------------------------------------------
 cols    1     2      3      4      5      6      7      8      9      10
 px      68    160    252    344    436    528    620    712    804    896    */
-#mobile_nav{
-	display: none;}
+#mobile_nav,
+.mobile_a_wrapper{display: none;}
 
 /*		Tablet Layout: 768px.
 		Gutters: 24px.
@@ -1945,10 +1945,13 @@ px      68    160    252    */
 	.firstpage_arrow{
 		position: relative;
 		left: auto;
-		margin: -590px auto 0;
+		margin: -140px auto 0;
 		/*top: 170px;
 		right: 10px;*/}
-	#ipone{margin: 120px 0 0 -50px;}
+	#ipone{
+		top: 345px;
+		/*margin-top: -120px;*/
+		/*margin: 120px 0 0 -50px;*/}
 	#person_phone,
 	#person_desk{display: none;}
 	#person_ipad{
@@ -1962,9 +1965,24 @@ px      68    160    252    */
 			margin-left: 0;
 			background-image: url(../image/person_phone_bubble.png);}
 	#shadow_circle{
-		top: 10px;
-		left: -97px;}
+		top: 230px;
+		left: -114px;
+		position: absolute;}
 	#person_ipad_image{}
+	.mobile_a_wrapper{
+		display: block;
+		position: absolute;
+		bottom: 0;}
+		.mobile_a_wrapper a{
+			height: 44px;
+			padding: 0 34px 0 24px;
+			display: block;
+			margin: 0 30px 5px;
+			color: #fff;
+			text-decoration: none;
+			background: #f89834 url(../image/mobile_a_arrow.png) no-repeat 92% center;}
+			.mobile_a_wrapper a.one_line{line-height: 44px;}
+
 .control_point{display: none;}
 
 }
