@@ -1920,16 +1920,17 @@ px      68    160    252    */
 #footer{height: auto;}
 	footer{
 		width: auto;
-		height: 107px;
+		height: 67px;
 		padding: 10px 0 0;}
 	.copyright,
 	.group_ventune{
 		width: auto;
 		height: auto;
 		float: none;
-		margin-top: 50px;
+		margin-top: 26px;
+		line-height: 35px;
 		text-align: center;}
-	.group_ventune{margin-top: -100px;}
+	.group_ventune{margin-top: -71px;}
 
 /*********
 @ Homepage
@@ -1937,6 +1938,7 @@ px      68    160    252    */
 .header{background: none;}
 	.firstpage_inner{
 		width: auto;
+		/*padding-top: 100px;*/
 		background-position: center bottom;
 		background-size: 130%;}
 	.page_title{
@@ -1950,6 +1952,7 @@ px      68    160    252    */
 		right: 10px;*/}
 	#ipone{
 		top: 345px;
+		display: none;
 		/*margin-top: -120px;*/
 		/*margin: 120px 0 0 -50px;*/}
 	#person_phone,
@@ -1974,14 +1977,52 @@ px      68    160    252    */
 		position: absolute;
 		bottom: 0;}
 		.mobile_a_wrapper a{
-			height: 44px;
-			padding: 0 34px 0 24px;
+			height: 41px;
+			padding: 3px 34px 0 24px;
 			display: block;
 			margin: 0 30px 5px;
 			color: #fff;
 			text-decoration: none;
 			background: #f89834 url(../image/mobile_a_arrow.png) no-repeat 92% center;}
-			.mobile_a_wrapper a.one_line{line-height: 44px;}
+			.mobile_a_wrapper a.one_line{
+				height: 44px;
+				padding-top: 0;
+				line-height: 44px;}
+
+	.secondpage_inner{
+		width: auto;
+		/*padding-top: 100px;*/
+		background-position: center bottom;
+		background-size: 130%;}
+		.secondpage_arrow{
+			position: relative;
+			left: auto;
+			margin: -120px auto 0;}
+		.sec_person_ipone,
+		.sec_person_ipone_hubble,
+		.sec_person_desk,
+		.sec_person_desk_hubble{display: none;}
+
+	.thirdpage_inner{}
+		.thirdpage_arrow{
+			position: relative;
+			left: auto;
+			margin: -120px auto 0;}
+		#ipad{
+			width: 320px;
+			height: 203px;
+			left: 50px;
+			margin-top: 20px;
+			bottom: 233px;
+			background-size: 100%;}
+			.ipad_title{
+				font-size: 70px;
+				margin-top: 30px;
+				line-height: 60px;}
+			.ipad_type{
+				font-size: 50px;
+				line-height: 40px;}
+			.ipad_info{font-size: 12px;}
 
 .control_point{display: none;}
 
