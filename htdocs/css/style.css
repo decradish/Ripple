@@ -1941,6 +1941,7 @@ px      68    160    252    */
 		float: left;
 		margin-top: 0;
 		font-size: 14px;
+		text-indent: 10px;
 		line-height: 48px;}
 	.fir_sec_bg ~ #footer .group_ventune{
 		width: 150px;
@@ -1992,8 +1993,8 @@ px      68    160    252    */
 		right: 10px;*/}
 	#ipone{
 		top: 345px;
-		display: none;
 		/*margin-top: -120px;*/
+		z-index: 99;
 		/*margin: 120px 0 0 -50px;*/}
 	#person_phone,
 	#person_desk{display: none;}
@@ -2013,14 +2014,15 @@ px      68    160    252    */
 		position: absolute;}
 	#person_ipad_image{}
 	.mobile_a_wrapper{
+		width: 100%;
 		display: block;
 		position: absolute;
 		bottom: 0;}
 		.mobile_a_wrapper a{
 			height: 41px;
-			padding: 3px 34px 0 24px;
+			padding: 3px 30px 0 24px;
 			display: block;
-			margin: 0 30px 5px;
+			margin: 0 20px 5px;
 			color: #fff;
 			text-decoration: none;
 			background: #f89834 url(../image/mobile_a_arrow.png) no-repeat 92% center;}
@@ -2048,10 +2050,19 @@ px      68    160    252    */
 			position: relative;
 			left: auto;
 			margin: -120px auto 0;}
+		.phone_title{
+			font-size: 60px;
+			line-height: 60px;}
+		.phone_type{
+			font-size: 50px;
+			line-height: 50px;}
+		.phone_info{
+			font-size: 13px;}
 		#ipad{
 			width: 320px;
 			height: 203px;
-			left: 50px;
+			left: auto;
+			right: -75px;
 			margin-top: 20px;
 			bottom: 233px;
 			background-size: 100%;}
@@ -2070,7 +2081,8 @@ px      68    160    252    */
 		#desktop{
 			width: 350px;
 			bottom: -120px;
-			left: 40px;
+			left: auto;
+			right: -90px;
 			background-size: 100%;}
 			/*#desktop > *{text-indent: -30px;}*/
 			.desktop_title{
@@ -2087,35 +2099,61 @@ px      68    160    252    */
 		.fifthpage_arrow{
 			position: relative;
 			left: auto;
-			margin: -120px auto 0;}
+			margin: -140px auto 0;}
+		.fly_doller > div{margin-left: -15px;}
+		.fly_doller > .doller_bag{
+			width: 140px;
+			height: 128px;
+			background-size: 100%;
+			margin: 0 0 -10px 14px;}
 	#left_hand{
-		width: 200px;
-		bottom: -60px;
-		margin-left: -200px;
+		width: 330px;
+		height: 300px;
+		bottom: 60px;
+		left: -15%;
+		/*margin-left: -200px;*/
 		background-size: 100%;}
 		#left_hand .big_hubble_five,
 		#left_hand .small_hubble_five{display: none !important;}
 	#right_hand{
 		width: 100px;
 		bottom: -60px;
-		margin-right: -250px;
+		right: 30%;
+		z-index: 90;
+		/*margin-right: -250px;*/
 		background-size: 100%;}
 
+.sixthpage{height: 868px;}
 	.sixthpage_inner{
 		width: auto;
+		height: 730px;
 		background: none;}
 		.fountain_pen{display: none;}
 		#page_title_6{margin-top: 0px;}
 			.backtotop{
 				position: relative;
 				left: auto;
-				margin: -220px auto 0;}
+				margin: -230px auto 0;}
 			.sixthpage_inner .mobile_a_wrapper{bottom: 50px;}
 			#ipad_min{
 				width: 400px;
-				right: -100px;
+				height: 350px;
+				right: -170px;
+				bottom: 300px;
 				background-size: 100%;}
-			#left_hand_six .big_hubble_five{display: none !important;}
+			.phone_content3_bg{
+				width: 144px;
+				height: 257px;
+				background-size: 100%;
+				margin: 54px 0 0 14px;}
+			#left_hand_six{
+				width: 330px;
+				left: -80px;
+				bottom: -105px;
+				background-size: 100%;}
+				#left_hand_six .big_hubble_five,
+				#left_hand_six .small_hubble_five{display: none !important;}
+		.sixthpage_inner .mobile_a_wrapper{bottom: 150px;}
 
 .control_point{display: none;}
 

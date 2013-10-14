@@ -297,8 +297,10 @@ var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windowssce|palm/i.test(n
 		}
 	}
 		$(document).ready(function() {
+			var oiPhone = $("ipone");
+			var bIsMobile = $("#mobile_nav").is(":visible");
 			var leftspace = $(window).width()/2-146/2;
-			if($("#mobile_nav").is(":visible")){leftspace = leftspace - 45;}
+			if(bIsMobile){leftspace = 26;}
 			var moveleftspace = $(window).width()/2-146/2-400;
 			$('#ipone').css('left',leftspace);
 			$('.wight_point').eq(0).click(function(){
@@ -521,21 +523,43 @@ var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windowssce|palm/i.test(n
 				TweenMax.to(doller4, 1, {scale: 0.3, repeat:-1});
 			}
 			var t=setTimeout(aaq,500);
-
 			
+			function fMiddle(iWidth){
+				return (($(window).width()-iWidth)/2)+'px';
+			}
 			function initScrollAnimations() {
 				var controller = $.superscrollorama();
+				var aPhoneData = [//[width, height, left, top, bottom]
+					['146px', '232px', leftspace,     '230px'],
+					['219px', '457px', leftspace,     '245px'],
+					['175px', '365px', moveleftspace],
+					['175px', '365px', moveleftspace],
+					['219px', '457px', leftspace-30],
+					['219px', '457px', leftspace-30, 'auto', '20px']
+				];
+				if(bIsMobile){
+					aPhoneData = [//[width, height, left, top]
+						['146px', '232px', leftspace, '345px'],
+						['145px', '305px', fMiddle(145), '200px'],
+						['130px', '275px', '10px'],
+						['130px', '275px', '10px'],
+						['175px', '365px', fMiddle(175)],
+						['175px', '365px', '30px', '230px', '120px']
+					];
+				}
 
 				controller.addTween(10, TweenMax.to($('#page_title_1'), 1, {css:{opacity: 0, fontSize: 0}, ease:Quad.easeOut}));
 				/*controller.addTween(10, TweenMax.to($('#ipone'), .75, {css:{left:leftspace,width: '146px',height: '232px'}, ease:Quad.easeOut}));*/
-				controller.addTween(10, TweenMax.fromTo($('#ipone'), .75, {css:{width: '146px',left:leftspace,height: '232px', marginTop: 0}, ease:Quad.easeOut},{css:{left:leftspace,width: '146px',height: '232px', marginTop: 0}}));
+				controller.addTween(10, TweenMax.fromTo($('#ipone'), .75, {css:{width: aPhoneData[0][0],left:aPhoneData[0][2],height: aPhoneData[0][1]}, ease:Quad.easeOut},{css:{left:aPhoneData[0][2],width: aPhoneData[0][0],height: aPhoneData[0][1]}}));
 				/*controller.addTween(10, TweenMax.fromTo($('#ipone_images'), 0.1, {css:{display:'block'}, ease:Quad.easeOut},{css:{display:'block'}}));*/
+
+
 				controller.addTween(501, TweenMax.fromTo($('.blue_point'), .1, {css:{top:'0px'}, ease:Quad.easeOut},{css:{top:'20px'}}));
 				controller.addTween(501, TweenMax.fromTo($('#ipone_images'), 0.1, {css:{display:'block'}, ease:Quad.easeOut},{css:{display:'none'}}));
 				/*controller.addTween(501, TweenMax.to($('#phone_content'), 0.7, {css:{display:'block',opacity: 1}, ease:Quad.easeOut}));*/
 				controller.addTween(501, TweenMax.fromTo($('#phone_content'), .1, {css:{display:'none',opacity: 0}, ease:Quad.easeOut},{css:{display:'block',opacity: 1}}));
 				controller.addTween(501, TweenMax.to($('#ipone_images_big'), 0.75, {css:{display:'block',opacity: 1}, ease:Quad.easeOut}));
-				controller.addTween(501, TweenMax.fromTo($('#ipone'), .75, {css:{width: '146px',left:leftspace,height: '232px'}, ease:Quad.easeOut},{css:{width: '219px',left:leftspace,height: '457px'}}));
+				controller.addTween(501, TweenMax.fromTo($('#ipone'), .75, {css:{top: aPhoneData[0][3], width: aPhoneData[0][0],left:aPhoneData[0][2],height: aPhoneData[0][1]}, ease:Quad.easeOut},{css:{top: aPhoneData[1][3], width: aPhoneData[1][0],left:aPhoneData[1][2],height: aPhoneData[1][1]}}));
 				/*controller.addTween(501, TweenMax.fromTo($('#phone_content2'), .1, {css:{display:'none',opacity: 0}, ease:Quad.easeOut},{css:{display:'none',opacity: 0}}));*/
 				controller.addTween(501, TweenMax.from($('#person_left_1'), .75, {css:{left: '-1000px',opacity: 0}, ease:Quad.easeOut}));
 				controller.addTween(501, TweenMax.from($('#person_right_1'), .75, {css:{right: '-1000px',opacity: 0}, ease:Quad.easeOut}));
@@ -546,7 +570,7 @@ var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windowssce|palm/i.test(n
 				
 
 				controller.addTween(1305, TweenMax.fromTo($('.blue_point'), .1, {css:{top:'20px'}, ease:Quad.easeOut},{css:{top:'40px'}}));
-				controller.addTween(1305, TweenMax.fromTo($('#ipone'), .75, {css:{top:'230px',width: '219px',left:leftspace-30,height: '457px'}, ease:Quad.easeOut},{css:{top:'330px',left:moveleftspace, width: '175px', height: '365px'}}));
+				controller.addTween(1305, TweenMax.fromTo($('#ipone'), .75, {css:{top:'230px',width: aPhoneData[1][0],left:aPhoneData[1][2]-30,height: aPhoneData[1][1]}, ease:Quad.easeOut},{css:{top:'330px',left:aPhoneData[2][2], width: aPhoneData[2][0], height: aPhoneData[2][1]}}));
 				controller.addTween(1305, TweenMax.fromTo($('#phone_content'), .1, {css:{display:'block',opacity: 1}, ease:Quad.easeOut},{css:{display:'block',opacity: 1}}));
 				/*controller.addTween(1305, TweenMax.fromTo($('#phone_content2'), .1, {css:{display:'none',opacity: 0}, ease:Quad.easeOut},{css:{display:'none',opacity: 0}}));*/
 				controller.addTween(1305, TweenMax.from($('#ipad'), .75, {css:{opacity: 0}, ease:Quad.easeOut}));
@@ -554,8 +578,9 @@ var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windowssce|palm/i.test(n
 				/*controller.addTween(1505, TweenMax.from($('#person_left_2'), .75, {css:{left: '-1000px',opacity: 0}, ease:Quad.easeOut}));
 				controller.addTween(1505, TweenMax.from($('#person_right_2'), .75, {css:{right: '-1000px',opacity: 0}, ease:Quad.easeOut}));*/
 
+
 				controller.addTween(2120, TweenMax.fromTo($('.blue_point'), .1, {css:{top:'40px'}, ease:Quad.easeOut},{css:{top:'60px'}}));
-				controller.addTween(2120, TweenMax.fromTo($('#ipone'), .75, {css:{width: '175px',left: moveleftspace,height: '365px'}, ease:Quad.easeOut},{css:{width: '175px',left: moveleftspace,height: '365px'}}));
+				controller.addTween(2120, TweenMax.fromTo($('#ipone'), .75, {css:{width: aPhoneData[2][0],left: aPhoneData[2][2],height: aPhoneData[2][1]}, ease:Quad.easeOut},{css:{width: aPhoneData[3][0],left: aPhoneData[3][2],height: aPhoneData[3][1]}}));
 				controller.addTween(2120, TweenMax.fromTo($('#phone_content'), .1, {css:{display:'block',opacity: 1}, ease:Quad.easeOut},{css:{display:'block',opacity: 1}}));
 				/*controller.addTween(2120, TweenMax.fromTo($('#phone_content2'), .1, {css:{display:'block',opacity: 1}, ease:Quad.easeOut},{css:{display:'none',opacity: 0}}));*/
 				controller.addTween(2120, TweenMax.from($('#desktop'), .75, {css:{opacity: 0}, ease:Quad.easeOut}));
@@ -563,19 +588,21 @@ var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windowssce|palm/i.test(n
 				/*controller.addTween(2320, TweenMax.from($('#person_left_3'), .75, {css:{left: '-1000px',opacity: 0}, ease:Quad.easeOut}));
 				controller.addTween(2320, TweenMax.from($('#person_right_3'), .75, {css:{right: '-1000px',opacity: 0}, ease:Quad.easeOut}));*/
 
+
 				controller.addTween(2900, TweenMax.fromTo($('.blue_point'), .1, {css:{top:'60px'}, ease:Quad.easeOut},{css:{top:'80px'}}));
 				/*controller.addTween(2900, TweenMax.to($('#phone_content'), 0.1, {css:{display:'none'}, ease:Quad.easeOut}));*/
 				controller.addTween(2900, TweenMax.fromTo($('#phone_content'), .1, {css:{display:'block',opacity: 1}, ease:Quad.easeOut},{css:{display:'none',opacity: 0}}));
-				controller.addTween(2900, TweenMax.fromTo($('#ipone'), .75, {css:{top:'330px',width: '175px',left:moveleftspace,height: '365px'}, ease:Quad.easeOut},{css:{top:'230px',width: '219px',left: leftspace-30,height: '457px'}}));
+				controller.addTween(2900, TweenMax.fromTo($('#ipone'), .75, {css:{top:'330px',width: aPhoneData[3][0],left:aPhoneData[3][2],height: aPhoneData[3][1]}, ease:Quad.easeOut},{css:{top:'230px',width: aPhoneData[4][0],left: aPhoneData[4][2],height: aPhoneData[4][1]}}));
 				controller.addTween(2900, TweenMax.fromTo($('#phone_content2'), .1, {css:{display:'none',opacity: 0}, ease:Quad.easeOut},{css:{display:'block',opacity: 1}}));
 				controller.addTween(2900, TweenMax.from($('#left_hand'), .75, {css:{left: '-500px', bottom: '-500px'}, ease:Quad.easeOut}));
 				controller.addTween(2900, TweenMax.from($('#right_hand'), .75, {css:{right: '-500px', bottom: '-500px'}, ease:Quad.easeOut}));
 				controller.addTween(2910, TweenMax.from($('#page_title_5'), 1, {css:{opacity: 0, fontSize: 0}, ease:Quad.easeOut}));
 
+
 				controller.addTween(3500, TweenMax.fromTo($('.blue_point'), .7, {css:{top:'80px'}, ease:Quad.easeOut},{css:{top:'100px'}}));
-				/*controller.addTween(3500, TweenMax.to($('#phone_content2'), 0.1, {css:{display:'none'}, ease:Quad.easeOut}));*/
+				controller.addTween(3500, TweenMax.to($('#phone_content2'), 0.1, {css:{display:'none'}, ease:Quad.easeOut}));
 				controller.addTween(3500, TweenMax.fromTo($('#phone_content3'), .1, {css:{display:'none',opacity: 0}, ease:Quad.easeOut},{css:{display:'block',opacity: 1}}));
-				controller.addTween(3500, TweenMax.fromTo($('#ipone'), .75, {css:{top:'230px',width: '219px',left: leftspace-30,height: '457px'}, ease:Quad.easeOut},{css:{top:'auto',bottom:'20px',width: '219px',left:leftspace-30,height: '457px'}}));
+				controller.addTween(3500, TweenMax.fromTo($('#ipone'), .75, {css:{top:'230px',width: aPhoneData[4][0],left: aPhoneData[4][2],height: aPhoneData[4][1]}, ease:Quad.easeOut},{css:{top: aPhoneData[5][3],bottom:aPhoneData[5][4],width: aPhoneData[5][0],left:aPhoneData[5][2],height: aPhoneData[5][1]}}));
 				controller.addTween(3500, TweenMax.from($('#ipad_min'), .75, {css:{right: '-1000px',opacity: 0}, ease:Quad.easeOut}));
 				controller.addTween(3500, TweenMax.from($('#left_hand_six'), .75, {css:{left: '-500px', bottom: '-500px'}, ease:Quad.easeOut}));
 				controller.addTween(3510, TweenMax.from($('#page_title_6'), 1, {css:{opacity: 0, fontSize: 0}, ease:Quad.easeOut}));
