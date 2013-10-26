@@ -1758,28 +1758,35 @@ cols    1     2      3
 px      68    160    252    */
 
 @media only screen and (max-width: 959px) {
-	/*body{overflow: hidden;}*/
+#header{height: auto;}
 	.header_inner{
 		width: auto;
+		height: 60px;
 		min-width: 320px;
 		position: relative;}
 		.nav{
 			width: 100%;
 			margin: 0;}
-			.nav li{display: none;}
+			.nav li{
+				display: none;
+				line-height: 60px;}
 			.nav li.logo{
 				display: block;
 				margin: 0 auto;
 				float: none;}
+			.logo{
+				width: 120px;
+				height: 60px;
+				background-size: 100%;}
 		.login_btn{display: none;}
 		#mobile_nav{
-			width: 60px;
-			/*height: 60px;*/
+			width: 40px;
+			height: 40px;
 			display: block;
 			position: absolute;
 			right: 0;
-			padding: 66px 0 0;
-			margin: 13px 7px 0 0;
+			padding: 43px 0 0;
+			margin: 10px 23px 0 0;
 			background: url(../image/mobile_nav_bg.png) no-repeat top center;}
 			.mobile_nav_core{
 				width: 120px;
@@ -1790,7 +1797,7 @@ px      68    160    252    */
 				position: absolute;
 				z-index: 1001;
 				/*display: none;*/
-				background: url(../image/mobile_arrow.png) no-repeat 73px 0;}
+				background: url(../image/mobile_arrow.png) no-repeat 83px 0;}
 				#mobile_nav a,
 				#mobile_nav > div div{
 					width: 120px;
@@ -1875,6 +1882,7 @@ px      68    160    252    */
 						width: auto;
 						float: none;
 						margin: 0 0 20px;}
+						.text h3{text-transform: uppercase;}
 			.exper_taball{display: none;}
 			.expic_list ul{text-align: center;}
 				.expic_list ul li{
@@ -1959,7 +1967,7 @@ px      68    160    252    */
 .header{background: none;}
 	.firstpage_inner{
 		width: auto;
-		padding-top: 100px;
+		padding-top: 80px;
 		background-position: center bottom;
 		background-size: 130%;}
 		#flash_point{width: 100px;}
@@ -1988,6 +1996,7 @@ px      68    160    252    */
 				background-position: center center;}
 	.page_title{
 		height: auto;
+		font-size: 20px;
 		padding: 0 30px;}
 	.firstpage_arrow{
 		position: relative;
@@ -1996,7 +2005,7 @@ px      68    160    252    */
 		/*top: 170px;
 		right: 10px;*/}
 	#ipone{
-		top: 345px;
+		top: 245px;
 		/*margin-top: -120px;*/
 		z-index: 99;
 		/*margin: 120px 0 0 -50px;*/}
@@ -2005,6 +2014,7 @@ px      68    160    252    */
 	#person_ipad{
 		left: auto;
 		right: 0;
+		top: 220px;
 		margin-right: 10px;}
 		#person_ipad .publisher_habble{
 			left: -80px;
@@ -2013,7 +2023,7 @@ px      68    160    252    */
 			margin-left: 0;
 			background-image: url(../image/person_phone_bubble.png);}
 	#shadow_circle{
-		top: 320px;
+		top: 220px;
 		left: -64px;
 		position: absolute;}
 	#person_ipad_image{}
@@ -2037,6 +2047,7 @@ px      68    160    252    */
 
 	.secondpage_inner{
 		width: auto;
+		height: 600px;
 		/*padding-top: 100px;*/
 		background-position: center bottom;
 		background-size: 130%;}
@@ -2099,38 +2110,47 @@ px      68    160    252    */
 				font-size: 18px;}
 				.desktop_info br{display: none;}
 				.desktop_info span{display: block;}
-	.fifthpage_inner{width: auto;}
+.forthpage{}
+	.forthpage .page_title{margin-top: -60px;}
+	.fifthpage_inner{
+		width: auto;
+		background: none;}
 		.fifthpage_arrow{
 			position: relative;
 			left: auto;
-			margin: -140px auto 0;}
+			margin: -150px auto 0;}
+		.fly_doller{
+			height: 180px;}
 		.fly_doller > div{margin-left: -15px;}
 		.fly_doller > .doller_bag{
-			width: 140px;
-			height: 128px;
+			width: 100px;
+			height: 100px;
 			background-size: 100%;
-			margin: 0 0 -10px 14px;}
+			margin: 0 0 -36px 14px;}
+			#fly_doller_right{display: none;}
 	#left_hand{
 		width: 330px;
 		height: 300px;
 		bottom: 60px;
-		left: -15%;
+		left: -20%;
 		/*margin-left: -200px;*/
 		background-size: 100%;}
 		#left_hand .big_hubble_five,
 		#left_hand .small_hubble_five{display: none !important;}
 	#right_hand{
-		width: 100px;
-		bottom: -60px;
-		right: 30%;
+		width: 200px;
+		bottom: 20px;
+		right: -18%;
 		z-index: 90;
 		/*margin-right: -250px;*/
-		background-size: 100%;}
+		background-size: 100%;
+		z-index: 999;
+		background-image: url(../image/right_hand_phone.png);}
 
-.sixthpage{height: 868px;}
+.sixthpage{height: auto;}
 	.sixthpage_inner{
 		width: auto;
-		height: 730px;
+		height: 530px;
 		background: none;}
 		.fountain_pen{display: none;}
 		#page_title_6{margin-top: 0px;}
@@ -2143,21 +2163,21 @@ px      68    160    252    */
 				width: 400px;
 				height: 350px;
 				right: -170px;
-				bottom: 300px;
+				bottom: 100px;
 				background-size: 100%;}
 			.phone_content3_bg{
-				width: 144px;
-				height: 257px;
+				width: 90px;
+				height: 200px;
 				background-size: 100%;
-				margin: 54px 0 0 14px;}
+				margin: 35px 0 0 9px;}
 			#left_hand_six{
-				width: 330px;
-				left: -80px;
-				bottom: -105px;
+				width: 200px;
+				left: -50px;
+				bottom: -130px;
 				background-size: 100%;}
 				#left_hand_six .big_hubble_five,
 				#left_hand_six .small_hubble_five{display: none !important;}
-		.sixthpage_inner .mobile_a_wrapper{bottom: 150px;}
+		.sixthpage_inner .mobile_a_wrapper{bottom: 15px;}
 
 .control_point{display: none;}
 
