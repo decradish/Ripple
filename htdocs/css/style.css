@@ -2148,7 +2148,7 @@ object{display: none;}
 	#right_hand{
 		width: 200px;
 		bottom: 20px;
-		right: -18%;
+		right: -29%;
 		z-index: 90;
 		/*margin-right: -250px;*/
 		background-size: 100%;
@@ -2173,7 +2173,7 @@ object{display: none;}
 				width: 400px;
 				height: 350px;
 				right: -170px;
-				bottom: 100px;
+				bottom: 150px;
 				background-size: 100%;}
 			.phone_content3_bg{
 				width: 90px;
@@ -2181,9 +2181,9 @@ object{display: none;}
 				background-size: 100%;
 				margin: 35px 0 0 9px;}
 			#left_hand_six{
-				width: 200px;
-				left: -50px;
-				bottom: -130px;
+				width: 220px;
+				left: -68px;
+				bottom: -30px;
 				background-size: 100%;}
 				#left_hand_six .big_hubble_five,
 				#left_hand_six .small_hubble_five{display: none !important;}
