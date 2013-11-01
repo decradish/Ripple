@@ -1710,6 +1710,9 @@ footer{
 	
 	color:#6c6c6c;
 }
+.phone{
+	display: none;
+}
 
 /*******************************************************
 @ This CSS file is created
@@ -1758,6 +1761,9 @@ cols    1     2      3
 px      68    160    252    */
 
 @media only screen and (max-width: 959px) {
+object{display: none;}
+.pc, #iframe_block{display: none;}
+.phone{display: block;}
 #header{height: auto;}
 	.header_inner{
 		width: auto;
@@ -2048,7 +2054,7 @@ px      68    160    252    */
 	.secondpage_inner{
 		width: auto;
 		height: 600px;
-		/*padding-top: 100px;*/
+		padding-top: 100px;
 		background-position: center bottom;
 		background-size: 130%;}
 		.secondpage_arrow{
@@ -2093,6 +2099,7 @@ px      68    160    252    */
 			position: relative;
 			left: auto;
 			margin: -120px auto 0;}
+			.forthpage .secondpage_inner{padding-top: 160px;}
 		#desktop{
 			width: 350px;
 			bottom: -120px;
@@ -2114,7 +2121,8 @@ px      68    160    252    */
 	.forthpage .page_title{margin-top: -60px;}
 	.fifthpage_inner{
 		width: auto;
-		background: none;}
+		background: none;
+		padding-top: 100px;}
 		.fifthpage_arrow{
 			position: relative;
 			left: auto;
@@ -2151,7 +2159,9 @@ px      68    160    252    */
 	.sixthpage_inner{
 		width: auto;
 		height: 530px;
-		background: none;}
+		height: 590px;
+		background: none;
+		/*padding-top: 120px;*/}
 		.fountain_pen{display: none;}
 		#page_title_6{margin-top: 0px;}
 			.backtotop{

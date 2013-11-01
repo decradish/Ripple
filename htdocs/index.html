@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
 	<meta name="viewport" content="width=device-width, initial-scale=1"/>
 	<title>Ripple</title>
-	<link rel="stylesheet" href="css/style.css?t=2013" type="text/css">	
+	<link rel="stylesheet" href="css/style.css?t=201310" type="text/css">	
 	<script type="text/javascript">// <![CDATA[
 	//var mobile = (/iphone|ipad|ipod|android|blackberry|mini|windowssce|palm/i.test(navigator.userAgent.toLowerCase()));     if (mobile) {         document.location = "http://touch.ripple.ad/";     }
 // ]]></script>
@@ -307,7 +307,7 @@
 			$('.wight_point').eq(0).click(function(){
 				/*window.scrollTo(0,0);*/
 				$("html, body").stop(true, false).animate({	
-				scrollTop: 0,
+					scrollTop: 0
 				}, 5000);	
 				/*setTimeout(function(){
 					TweenMax.to($('.blue_point'), 0.5, {top:'0'});
@@ -321,7 +321,7 @@
 			$('.backtotop').click(function(){
 				/*window.scrollTo(0,0);*/
 				$("html, body").stop(true, false).animate({	
-				scrollTop: 0,
+					scrollTop: 0
 				}, 5000);	
 				/*setTimeout(function(){
 					TweenMax.to($('.blue_point'), 0.5, {top:'0'});
@@ -335,7 +335,7 @@
 			$('.wight_point').eq(1).click(function(){
 				/*window.scrollTo(0,787);	*/
 				$("html, body").stop(true, false).animate({	
-				scrollTop: 787,
+					scrollTop: 787
 				}, 5000);
 				/*setTimeout(function(){
 					TweenMax.to($('.blue_point'), 0.5, {top:'20px'});
@@ -351,7 +351,7 @@
 			$('.firstpage_arrow').click(function(){
 				/*window.scrollTo(0,787);	*/
 				$("html, body").stop(true, false).animate({	
-				scrollTop: 787,
+					scrollTop: 787
 				}, 5000);
 				/*setTimeout(function(){
 					TweenMax.to($('.blue_point'), 0.5, {top:'20px'});
@@ -367,7 +367,7 @@
 			$('.wight_point').eq(2).click(function(){
 				/*window.scrollTo(0,1554);*/
 				$("html, body").stop(true, false).animate({	
-				scrollTop: 1554,
+					scrollTop: 1554
 				}, 5000);
 				/*setTimeout(function(){
 					TweenMax.to($('.blue_point'), 0.5, {top:'40px'});	
@@ -382,7 +382,7 @@
 			$('.secondpage_arrow').click(function(){
 				/*window.scrollTo(0,1554);*/
 				$("html, body").stop(true, false).animate({	
-				scrollTop: 1554,
+					scrollTop: 1554
 				}, 5000);
 				/*setTimeout(function(){
 					TweenMax.to($('.blue_point'), 0.5, {top:'40px'});	
@@ -397,7 +397,7 @@
 			$('.wight_point').eq(3).click(function(){
 				/*window.scrollTo(0,2321);*/
 				$("html, body").stop(true, false).animate({	
-				scrollTop: 2321,
+					scrollTop: 2321
 				}, 5000);	
 				/*setTimeout(function(){
 					TweenMax.to($('.blue_point'), 0.5, {top:'60px'});			
@@ -412,7 +412,7 @@
 			$('.thirdpage_arrow').click(function(){
 				/*window.scrollTo(0,1554);*/
 				$("html, body").stop(true, false).animate({	
-				scrollTop: 2321,
+					scrollTop: 2321
 				}, 5000);
 				
 				page= 4;
@@ -428,7 +428,7 @@
 			$('.wight_point').eq(4).click(function(){
 				/*window.scrollTo(0,3087);*/	
 				$("html, body").stop(true, false).animate({	
-				scrollTop: 3087,
+					scrollTop: 3087
 				}, 5000);	
 				/*setTimeout(function(){
 					TweenMax.to($('.blue_point'), 0.5, {top:'80px'});	
@@ -443,7 +443,7 @@
 			$('.forthpage_arrow').click(function(){
 				/*window.scrollTo(0,3087);*/	
 				$("html, body").stop(true, false).animate({	
-				scrollTop: 3087,
+					scrollTop: 3087
 				}, 5000);	
 				page =5;
 				/*setTimeout(function(){
@@ -458,7 +458,7 @@
 			$('.wight_point').eq(5).click(function(){
 				/*window.scrollTo(0,4055);*/
 				$("html, body").stop(true, false).animate({	
-				scrollTop: 4055,
+					scrollTop: 4055
 				}, 6500);	
 				page =6;
 				/*setTimeout(function(){
@@ -471,9 +471,13 @@
 				TweenMax.to($('#ipone_images_big'), 0.1, {display:'block',opacity: 1});	*/
 			});
 			$('.fifthpage_arrow').click(function(){
-				/*window.scrollTo(0,3087);*/	
+				/*window.scrollTo(0,3087);*/
+				var i5thArrow = 4055;
+				if(bIsMobile){
+					i5thArrow = 3855;
+				}
 				$("html, body").stop(true, false).animate({	
-				scrollTop: 4055,
+					scrollTop: i5thArrow
 				}, 5000);	
 				page =6;
 				/*setTimeout(function(){
@@ -556,7 +560,7 @@
 				if(bIsMobile){
 					aPhoneData = [
 					  //[width,   height,  left,         top]
-						['146px', '232px', leftspace,    '345px'],
+						['146px', '232px', leftspace,    '245px'],
 						['145px', '275px', fMiddle(145), '200px'],
 						['130px', '275px', '10px',       '200px'],
 						['130px', '275px', '10px'],
@@ -619,7 +623,7 @@
 				controller.addTween(3500, TweenMax.fromTo($('.blue_point'), .7, {css:{top:'80px'}, ease:Quad.easeOut},{css:{top:'100px'}}));
 				controller.addTween(3500, TweenMax.to($('#phone_content2'), 0.1, {css:{display:'none'}, ease:Quad.easeOut}));
 				controller.addTween(3500, TweenMax.fromTo($('#phone_content3'), .1, {css:{display:'none',opacity: 0}, ease:Quad.easeOut},{css:{display:'block',opacity: 1}}));
-				controller.addTween(3500, TweenMax.fromTo($('#ipone'), .75, {css:{top:'230px',width: aPhoneData[4][0],left: aPhoneData[4][2],height: aPhoneData[4][1]}, ease:Quad.easeOut},{css:{top: aPhoneData[5][3],bottom:aPhoneData[5][4],width: aPhoneData[5][0],left:aPhoneData[5][2],height: aPhoneData[5][1]}}));
+				controller.addTween(3500, TweenMax.fromTo($('#ipone'), .75, {css:{top:aPhoneData[4][3],width: aPhoneData[4][0],left: aPhoneData[4][2],height: aPhoneData[4][1]}, ease:Quad.easeOut},{css:{top: aPhoneData[5][3],bottom:aPhoneData[5][4],width: aPhoneData[5][0],left:aPhoneData[5][2],height: aPhoneData[5][1]}}));
 				controller.addTween(3500, TweenMax.from($('#ipad_min'), .75, {css:{right: '-1000px',opacity: 0}, ease:Quad.easeOut}));
 				controller.addTween(3500, TweenMax.from($('#left_hand_six'), .75, {css:{left: '-500px', bottom: '-500px'}, ease:Quad.easeOut}));
 				controller.addTween(3510, TweenMax.from($('#page_title_6'), 1, {css:{opacity: 0, fontSize: 0}, ease:Quad.easeOut}));
