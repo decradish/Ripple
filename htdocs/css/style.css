@@ -2140,17 +2140,17 @@ object{display: none;}
 		width: 330px;
 		height: 300px;
 		bottom: 60px;
-		left: -20%;
-		/*margin-left: -200px;*/
+		left: 50%;
+		margin-left: -215px;
 		background-size: 100%;}
 		#left_hand .big_hubble_five,
 		#left_hand .small_hubble_five{display: none !important;}
 	#right_hand{
 		width: 200px;
 		bottom: 20px;
-		right: -27%;
+		right: 50%;
 		z-index: 90;
-		/*margin-right: -250px;*/
+		margin-right: -240px;
 		background-size: 100%;
 		z-index: 999;
 		background-image: url(../image/right_hand_phone.png);}
