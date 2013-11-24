@@ -1880,6 +1880,7 @@ object{display: none;}
 		.content{
 			width: auto;
 			margin: 0 25px;}
+			.content.leader{margin-bottom: 80px;}
 			.content h1{margin-top: 15px;}
 				.breviary{margin: 10px 0;}
 					.breviary > a{display: block;}
@@ -1944,7 +1945,13 @@ object{display: none;}
 		margin-top: 26px;
 		line-height: 35px;
 		text-align: center;}
-	.group_ventune{margin-top: -71px;}
+	.copyright{
+		font-size: 12px;
+		margin-top: 15px;}
+	.group_ventune{
+		margin-top: -71px;
+		margin-top: -57px;}
+	.group_ventune img{height: 35px;}
 
 /*********
 @ Homepage
@@ -1958,14 +1965,17 @@ object{display: none;}
 		margin-top: 0;
 		font-size: 14px;
 		text-indent: 10px;
-		line-height: 48px;}
+		/*line-height: 48px;*/
+		line-height: 36px;}
 	.fir_sec_bg ~ #footer .group_ventune{
 		width: 150px;
+		line-height: 25px;
 		float: right;
 		margin-top: 0;}
 		.fir_sec_bg ~ #footer .group_ventune img{
 			width: 90%;
-			margin-top: 5px;}
+			height: 90%;
+			/*margin-top: 5px;*/}
 .fir_sec_bg ~ .bottom_btn .bottom_btn_open{
 	display: none;
 	margin-top: -49px;}
@@ -2190,6 +2200,19 @@ object{display: none;}
 		.sixthpage_inner .mobile_a_wrapper{bottom: 15px;}
 
 .control_point{display: none;}
+
+		.onphone{
+			left: 4px;
+			top: 29px;}
+		.million2{
+			left: 4px;
+			top: 29px;}
+		.million3{
+			left: 4px;
+			top: 54px;}
+		.million4{
+			left: 4px;
+			top: 79px;}
 
 }
 
